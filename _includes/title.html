@@ -1,0 +1,117 @@
+
+<p class="is-size-5 authors-list">
+    {%- for author in page.authors -%}
+        <span class="author-block" style="margin-right:20px; margin-left:20px">
+            {%- if author.link -%}
+              {%- if author.corresponding -%}
+                <a class="author-link" href="{{author.link}}" target="_blank">{{author.name}}</a>*
+              {%- else -%}
+                <a class="author-link" href="{{author.link}}" target="_blank">{{author.name}}</a>
+              {%- endif -%}  
+            {%- else -%}
+            {{author.name}}
+            {%- endif -%}
+        </span>
+    {%- endfor -%}
+    <br/>
+    
+    <div class="is-size-6 puiblicatino-authors">*: Corresponding author</div>
+
+
+    <div class="is-size-5 puiblicatino-authors">
+        {%- for affiliation in page.affiliations -%}
+            <span class="author-block" style="margin-right:20px; margin-left:20px">{{ affiliation }}</span>
+        {%- endfor -%}
+        <br/>
+        {%- if page.conference -%}
+            <span class="author-block" style="margin-right:20px; margin-left:20px">{{ page.conference }}</span>
+        {%- endif -%}
+    </div>
+</p>
+
+
+
+<div class="column has-text-centered">
+    <div class="publication-links">
+    <!-- Arxiv PDF link -->
+      <span class="link-block">
+        <a href= "{{ page.paper_link }}" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-file-pdf"></i>
+        </span>
+        <span>Paper</span>
+      </a>
+    </span>
+
+    <!-- Supplementary PDF link -->
+    {%- if page.supplementary_link -%}
+    <span class="link-block">
+      <a href="{{page.supplementary_link}}" target="_blank"
+      class="external-link button is-normal is-rounded is-dark">
+      <span class="icon">
+        <i class="fas fa-file-pdf"></i>
+      </span>
+      <span>Supplementary</span>
+      </a>
+    </span>
+    {%- endif -%}
+
+  <!-- Github link -->
+{%- if page.github_link -%}
+  <span class="link-block">
+    <a href="{{page.github_link}}" target="_blank"
+    class="external-link button is-normal is-rounded is-dark">
+    <span class="icon">
+      <i class="fab fa-github"></i>
+    </span>
+    <span>Code</span>
+  </a>
+</span>
+{%- else -%}
+<span class="link-block">
+  <a href="" target="_blank"
+  class="external-link button is-normal is-rounded is-dark">
+  <span class="icon">
+    <i class="fab fa-github"></i>
+  </span>
+  <span>Code (will be uploaded soon)</span>
+</a>
+</span>
+{%- endif -%}
+
+
+{%- if page.arxiv_link -%}
+<!-- ArXiv abstract Link -->
+<span class="link-block">
+  <a href="{{page.arxiv_link}}" target="_blank"
+  class="external-link button is-normal is-rounded is-dark">
+  <span class="icon">
+    <i class="ai ai-arxiv"></i>
+  </span>
+  <span>arXiv</span>
+</a>
+{%- endif -%}
+
+{%- if page.openreview_link -%}
+<!-- Openreview Link -->
+<span class="link-block">
+  <a href="{{page.openreview_link}}" target="_blank"
+  class="external-link button is-normal is-rounded is-dark">
+  <span>Openreview</span>
+</a>
+{%- endif -%}
+</span>
+</div>
+
+{%- if page.title_image -%}
+<div class="column is-full">
+    <img src="{{page.title_image.url}}" alt="Title Image" style="width: 100%">
+</div>
+{%- endif -%}
+
+{%- if page.tldr -%}
+<div class="column is-full">
+    <h2 class="is-size-5"><strong>TL;DR</strong>: {{page.tldr}}</h2>
+</div>
+{%- endif -%}
