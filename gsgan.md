@@ -227,7 +227,6 @@ sections:
 
 contact: >-
   For any further questions, please contact hse1032@gmail.com
-          
 bibtex: >-
     @misc{hyun2024adversarial,
           title={Adversarial Generation of Hierarchical Gaussians for 3D Generative Model}, 
