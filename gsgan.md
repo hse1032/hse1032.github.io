@@ -224,6 +224,10 @@ sections:
           - {url: /resources/tom_inversion.mp4}
           - {url: /resources/jennifer_inversion.mp4}
           - {url: /resources/will_inversion.mp4}
+
+contact: >-
+  For any further questions, please contact hse1032@gmail.com
+          
 bibtex: >-
     @misc{hyun2024adversarial,
           title={Adversarial Generation of Hierarchical Gaussians for 3D Generative Model}, 
