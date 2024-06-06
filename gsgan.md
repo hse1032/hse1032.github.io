@@ -9,7 +9,7 @@ affiliations:
 
 paper_link: /gsgan.html
 supplementary_link: 
-arxiv_link: 
+arxiv_link: https://arxiv.org/abs/2406.02968
 github_link: 
 openreview_link:
 conference: Arxiv 2024
@@ -225,17 +225,12 @@ sections:
           - {url: /resources/jennifer_inversion.mp4}
           - {url: /resources/will_inversion.mp4}
 bibtex: >-
-#    @inproceedings{3dgp,
-#        title={3D generation on ImageNet},
-#        author={Ivan Skorokhodov and Aliaksandr Siarohin and Yinghao Xu and Jian Ren and Hsin-Ying Lee and Peter Wonka and Sergey Tulyakov},
-#        booktitle={International Conference on Learning Representations},
-#        year={2023},
-#        url={https://openreview.net/forum?id=U2WjB9xxZ9q}
-#    }
-#     @article{vq3d,
-#         title={VQ3D: Learning a 3D-Aware Generative Model on ImageNet},
-#         author={Sargent, Kyle and Koh, Jing Yu and Zhang, Han and Chang, Huiwen and Herrmann, Charles and Srinivasan, Pratul and Wu, Jiajun and Sun, Deqing},
-#         journal={arXiv preprint arXiv:2302.06833},
-#         year={2023}
-#     }
+    @misc{hyun2024adversarial,
+          title={Adversarial Generation of Hierarchical Gaussians for 3D Generative Model}, 
+          author={Sangeek Hyun and Jae-Pil Heo},
+          year={2024},
+          eprint={2406.02968},
+          archivePrefix={arXiv},
+          primaryClass={cs.CV}
+    }
 ---
