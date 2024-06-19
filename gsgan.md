@@ -2,7 +2,7 @@
 layout: project
 title: Adversarial Generation of Hierarchical Gaussians <br/> for 3D Generative Model
 authors:
-    - {name: "Sangeek Hyun", link: "", org: 0}
+    - {name: "Sangeek Hyun", link: "https://scholar.google.com/citations?user=xbaJDBwAAAAJ", org: 0}
     - {name: "Jae-Pil Heo", link: "https://sites.google.com/site/jaepilheo", org: 0, corresponding: "True"}
 affiliations:
     - "Sungkyunkwan University"
