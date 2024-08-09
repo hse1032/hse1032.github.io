@@ -10,7 +10,7 @@ affiliations:
 paper_link: /gsgan.html
 supplementary_link: 
 arxiv_link: https://arxiv.org/abs/2406.02968
-github_link: 
+github_link: https://github.com/hse1032/Adversarial-Generation-of-Hierarchical-Gaussians-for-3D-Generative-Model
 openreview_link:
 conference: Arxiv 2024
 
