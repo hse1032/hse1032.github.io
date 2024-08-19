@@ -228,12 +228,10 @@ sections:
 contact: >-
   For any further questions, please contact hse1032@gmail.com
 bibtex: >-
-    @misc{hyun2024adversarial,
-          title={Adversarial Generation of Hierarchical Gaussians for 3D Generative Model}, 
-          author={Sangeek Hyun and Jae-Pil Heo},
-          year={2024},
-          eprint={2406.02968},
-          archivePrefix={arXiv},
-          primaryClass={cs.CV}
+    @article{hyun2024adversarial,
+      title={Adversarial Generation of Hierarchical Gaussians for 3D Generative Model},
+      author={Hyun, Sangeek and Heo, Jae-Pil},
+      journal={arXiv preprint arXiv:2406.02968},
+      year={2024}
     }
 ---
