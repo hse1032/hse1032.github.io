@@ -12,7 +12,7 @@ supplementary_link:
 arxiv_link: https://arxiv.org/abs/2406.02968
 github_link: https://github.com/hse1032/Adversarial-Generation-of-Hierarchical-Gaussians-for-3D-Generative-Model
 openreview_link:
-conference: Arxiv 2024
+conference: NeurIPS 2024
 
 tldr: For the first time, we leverage 3D Gaussian representation in 3D GANs for efficient rendering with explicit 3D representation.
 
