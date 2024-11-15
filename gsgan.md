@@ -1,6 +1,6 @@
 ---
 layout: project
-title: GSGAN\: Adversarial Learning for <br/> Hierarchical Generation of 3D Gaussian Splats
+title: GSGAN - Adversarial Learning for <br/> Hierarchical Generation of 3D Gaussian Splats
 authors:
     - {name: "Sangeek Hyun", link: "https://hse1032.github.io/", org: 0}
     - {name: "Jae-Pil Heo", link: "https://sites.google.com/site/jaepilheo", org: 0, corresponding: "True"}
