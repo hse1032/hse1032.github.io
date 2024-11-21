@@ -7,7 +7,7 @@ authors:
 affiliations:
     - "Sungkyunkwan University"
 
-paper_link: /gsgan.html
+paper_link: https://arxiv.org/pdf/2406.02968
 supplementary_link: 
 arxiv_link: https://arxiv.org/abs/2406.02968
 github_link: https://github.com/hse1032/GSGAN
