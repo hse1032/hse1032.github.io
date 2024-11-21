@@ -11,7 +11,7 @@ paper_link: /gsgan.html
 supplementary_link: 
 arxiv_link: https://arxiv.org/abs/2406.02968
 github_link: https://github.com/hse1032/GSGAN
-openreview_link:
+openreview_link: https://openreview.net/forum?id=sFaFDcVNbW
 conference: NeurIPS 2024
 
 tldr: For the first time, we leverage 3D Gaussian representation in 3D GANs for efficient rendering with explicit 3D representation.
