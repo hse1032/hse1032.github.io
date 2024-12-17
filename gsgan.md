@@ -228,10 +228,9 @@ sections:
 contact: >-
   For any further questions, please contact hse1032@gmail.com
 bibtex: >-
-    @article{hyun2024adversarial,
-      title={Adversarial Generation of Hierarchical Gaussians for 3D Generative Model},
-      author={Hyun, Sangeek and Heo, Jae-Pil},
-      journal={arXiv preprint arXiv:2406.02968},
-      year={2024}
-    }
+  @inproceedings{hyungsgan,
+    title={GSGAN: Adversarial Learning for Hierarchical Generation of 3D Gaussian Splats},
+    author={Hyun, Sangeek and Heo, Jae-Pil},
+    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems}
+  }
 ---
