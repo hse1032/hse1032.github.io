@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GSGAN - Adversarial Learning for <br/> Hierarchical Generation of 3D Gaussian Splats</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-2 publication-title">GSGAN - Adversarial Learning for <br/> Hierarchical Generation of 3D Gaussian Splats</h1>
+
+                <!-- Author names -->
+                
+<p class="is-size-5 authors-list"><span class="author-block" style="margin-right:20px; margin-left:20px"><a class="author-link" href="https://hse1032.github.io/" target="_blank">Sangeek Hyun</a></span><span class="author-block" style="margin-right:20px; margin-left:20px"><a class="author-link" href="https://sites.google.com/site/jaepilheo" target="_blank">Jae-Pil Heo</a>*</span><br/>
+    
+    <div class="is-size-6 puiblicatino-authors">*: Corresponding author</div>
+
+
+    <div class="is-size-5 puiblicatino-authors"><span class="author-block" style="margin-right:20px; margin-left:20px">Sungkyunkwan University</span><br/><span class="author-block" style="margin-right:20px; margin-left:20px">NeurIPS 2024</span></div>
+</p>
+
+
+
+<div class="column has-text-centered">
+    <div class="publication-links">
+    <!-- Arxiv PDF link -->
+      <span class="link-block">
+        <a href= "https://arxiv.org/pdf/2406.02968" target="_blank"
+        class="external-link button is-normal is-rounded is-dark">
+        <span class="icon">
+          <i class="fas fa-file-pdf"></i>
+        </span>
+        <span>Paper</span>
+      </a>
+    </span>
+
+    <!-- Supplementary PDF link --><!-- Github link --><span class="link-block">
+    <a href="https://github.com/hse1032/GSGAN" target="_blank"
+    class="external-link button is-normal is-rounded is-dark">
+    <span class="icon">
+      <i class="fab fa-github"></i>
+    </span>
+    <span>Code</span>
+  </a>
+</span><!-- ArXiv abstract Link -->
+<span class="link-block">
+  <a href="https://arxiv.org/abs/2406.02968" target="_blank"
+  class="external-link button is-normal is-rounded is-dark">
+  <span class="icon">
+    <i class="ai ai-arxiv"></i>
+  </span>
+  <span>arXiv</span>
+</a><!-- Openreview Link -->
+<span class="link-block">
+  <a href="https://openreview.net/forum?id=sFaFDcVNbW" target="_blank"
+  class="external-link button is-normal is-rounded is-dark">
+  <span>Openreview</span>
+</a></span>
+</div><div class="column is-full">
+    <img src="/static/projects/gsgan/resources/fig_example_intro.jpg" alt="Title Image" style="width: 100%">
+</div><div class="column is-full">
+    <h2 class="is-size-5"><strong>TL;DR</strong>: For the first time, we leverage 3D Gaussian representation in 3D GANs for efficient rendering with explicit 3D representation.</h2>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Sections --><section class="section hero is-light">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+                    <p>Most advances in 3D Generative Adversarial Networks (3D GANs) largely depend on ray casting-based volume rendering, which incurs demanding rendering costs. One promising alternative is rasterization-based 3D Gaussian Splatting (3D-GS), providing a much faster rendering speed and explicit 3D representation. In this paper, we exploit Gaussian as a 3D representation for 3D GANs by leveraging its efficient and explicit characteristics. However, in an adversarial framework, we observe that a na\"ive generator architecture suffers from training instability and lacks the capability to adjust the scale of Gaussians. This leads to model divergence and visual artifacts due to the absence of proper guidance for initialized positions of Gaussians and densification to manage their scales adaptively. To address these issues, we introduce a generator architecture with a hierarchical multi-scale Gaussian representation that effectively regularizes the position and scale of generated Gaussians. Specifically, we design a hierarchy of Gaussians where finer-level Gaussians are parameterized by their coarser-level counterparts; the position of finer-level Gaussians would be located near their coarser-level counterparts, and the scale would monotonically decrease as the level becomes finer, modeling both coarse and fine details of the 3D scene. Experimental results demonstrate that ours achieves a significantly faster rendering speed (×100) compared to state-of-the-art 3D consistent GANs with comparable 3D generation capability.</p>
+        
+                    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">Method</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <img src="/static/projects/gsgan/resources/fig_web.jpg" style="width: 1200px"/>
+                        
+                            <p class="caption"><span>To handle with the absence of guidance on position and scale of Gaussians, we devise a method to regularize the Gaussian representation for 3D GANs, focusing particularly on the position and scale parameters. To this end, we propose a generator architecture with a hierarchical Gaussian representation. This hierarchical representation models the Gaussians of adjacent levels to be dependent, encouraging the generator to synthesize the 3D space in a coarse-to-fine manner. Specifically, we first introduce a locality constraint whereby the positions of fine-level Gaussians are located near their coarse-level counterpart Gaussians and are parameterized by them, thus reducing the possible positions of newly added Gaussians. Then, we design the scale of Gaussians to monotonically decrease as the level of Gaussians becomes finer, facilitating the generator's ability to model the scene in both coarse and fine details. <br/><br/><br/></span></p>
+                        
+                    </div>
+        
+                    
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="450" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/interpolation_resall_ffhq256_clip_scale_6000-6007.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span><b>Naive model (FID=95.97, FFHQ-256)</b></span></p>
+                                
+                            <!-- </div> -->
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="450" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/interpolation_resall_ffhq256_6000-6007.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span><b>Our model (FID=6.59, FFHQ-256)</b></span></p>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                        <p class="caption"><span>With this proposed hierarchical Gaussian representation, we significantly enhance the generation capability of 3D GANs with Gaussian representation (FID=6.59) compared to naive model (FID=95.97), while achieving much faster rendering speed (~3ms per image) compared to NeRF-based 3D GANs.</span></p>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">Quantitative results (FID)</h2>
+          <div class="content has-text-justified">
+                    <div class="table-container" style="max-width: 1000px;">
+                        <p><table>
+  <thead>
+      <tr>
+          <th><span>Methods</span></th>
+          <th><span>3D consistency</span></th>
+          <th><span>FFHQ 256×256</span></th>
+          <th><span>FFHQ 512×512</span></th>
+          <th><span>AFHQ-Cat 256×256</span></th>
+          <th><span>AFHQ-Cat 512×512</span></th>
+          <th><span>Rendering time 256×256 (ms)</span></th>
+          <th><span>Rendering time 512×512 (ms)</span></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2112.07945" target="_blank">EG3D</a></td>
+          <td><span></span></td>
+          <td><span>4.80</span></td>
+          <td><span>4.70</span></td>
+          <td><span>3.41</span></td>
+          <td><span>2.72</span></td>
+          <td><span>-</span></td>
+          <td><span>15.5<sup>*</sup></span></td>
+      </tr>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2112.08867" target="_blank">GRAM</a></td>
+          <td><span>&#10003;</span></td>
+          <td><span>13.8</span></td>
+          <td><span>-</span></td>
+          <td><span>13.4</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+      </tr>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2207.10642" target="_blank">GMPI</a></td>
+          <td><span>&#10003;</span></td>
+          <td><span>11.4</span></td>
+          <td><span>8.29</span></td>
+          <td><span>-</span></td>
+          <td><span>7.67</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+      </tr>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2206.10535" target="_blank">EpiGRAF</a></td>
+          <td><span>&#10003;</span></td>
+          <td><span>9.71</span></td>
+          <td><span>9.92</span></td>
+          <td><span>6.93</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+      </tr>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2206.07695" target="_blank">Voxgraf</a></td>
+          <td><span>&#10003;</span></td>
+          <td><span>9.60</span></td>
+          <td><span>-</span></td>
+          <td><span>9.60</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+      </tr>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2206.07255" target="_blank">GRAM-HD</a></td>
+          <td><span>&#10003;</span></td>
+          <td><span>10.4</span></td>
+          <td><span>-</span></td>
+          <td><span>-</span></td>
+          <td><span>7.67</span></td>
+          <td><span>173.0</span></td>
+          <td><span>197.9</span></td>
+      </tr>
+      <tr>
+          <td><a href="https://arxiv.org/abs/2303.09036" target="_blank">Mimic3D</a></td>
+          <td><span>&#10003;</span></td>
+          <td><span><b>5.14</b></span></td>
+          <td><span><b>5.37</b></span></td>
+          <td><span><u>4.14</u></span></td>
+          <td><span><u>4.29</u></span></td>
+          <td><span>106.8</span></td>
+          <td><span>402.1</span></td>
+      </tr>
+      <tr>
+          <td><span>Ours</span></td>
+          <td><span>&#10003;</span></td>
+          <td><span><u>6.59</u></span></td>
+          <td><span><u>5.60</u></span></td>
+          <td><span><b>3.43</b></span></td>
+          <td><span><b>3.79</b></span></td>
+          <td><span><b>2.7</b></span></td>
+          <td><span><b>3.0</b></span></td>
+      </tr>
+  </tbody>
+</table></p>
+                    </div>
+                    
+                    </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">1. Generated examples on FFHQ-512</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="800" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/ffhq512.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span></span></p>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">2. Generated examples on FFHQ-256</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="1050" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/ffhq256.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span></span></p>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">3. Generated examples on AFHQ-512</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="800" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/afhq512.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span></span></p>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">4. Generated examples on AFHQ-256</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="1050" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/afhq256.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span></span></p>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">5. Visualization results with shrink of the scale of Gaussians</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="384" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/ffhq512_shrunk.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                            <!-- </div> -->
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="384" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/afhq512_shrunk.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">6. Visualization results for each level</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="1050" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/ffhq512_levels.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span></span></p>
+                                
+                            <!-- </div> -->
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="1050" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/afhq512_levels.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                                <p class="caption"><span></span></p>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><section class="section hero ">
+    <div class="container is-max-desktop">
+    <!-- <div class="container is-full"> -->
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-full">
+          <h2 class="title is-3">7. Novel view synthesis with w+ inversion</h2>
+          <div class="content has-text-justified">
+                    <div class="img-container has-text-centered">
+                        
+                        <img src="/static/projects/gsgan/resources/tom_input.png" style="max-width: 200px"/>
+                        
+                        <img src="/static/projects/gsgan/resources/jennifer_input.png" style="max-width: 200px"/>
+                        
+                        <img src="/static/projects/gsgan/resources/will_input.png" style="max-width: 200px"/>
+                        
+                        
+                    </div>
+            
+
+                    
+                    <div class="img-container">
+                        <div class="videos-list" style="text-align: center;">
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="200" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/tom_inversion.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                            <!-- </div> -->
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="200" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/jennifer_inversion.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                            <!-- </div> -->
+                            
+                            <!-- <div class="video-item"> -->
+                                <video width="200" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="/static/projects/gsgan/resources/will_inversion.mp4" type="video/mp4" controls loop autoplay></video>
+                                
+                            <!-- </div> -->
+                            
+                        </div>
+                        
+                    </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <hr/> --><!-- End Sections -->
+
+<!-- Contact -->
+<section class="section" id="Contact">
+    <div class="container is-max-desktop">
+      <h2 class="title">Contact</h2>
+      <pre><code>For any further questions, please contact hse1032@gmail.com</code></pre>
+    </div>
+</section>
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <!-- <pre><code>BibTex Code Here</code></pre> -->
+      <pre><code>@inproceedings{hyungsgan,
+  title={GSGAN: Adversarial Learning for Hierarchical Generation of 3D Gaussian Splats},
+  author={Hyun, Sangeek and Heo, Jae-Pil},
+  booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
