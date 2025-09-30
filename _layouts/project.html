@@ -132,7 +132,7 @@
                                 src="{{ paragraph.host }}{{ video.url }}"
                                 type="video/mp4"
                                 {% if paragraph.loop != false %}loop{% endif %}
-                                {% if paragraph.autoplay = %}autoplay muted playsinline{% endif %}
+                                {% if paragraph.autoplay == true %}autoplay muted playsinline{% endif %}
                                 {% if paragraph.controls != false %}controls{% endif %}>
                               </video>
                                 {% if video.caption %}
