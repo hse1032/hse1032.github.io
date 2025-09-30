@@ -125,10 +125,19 @@
                         <div class="videos-list" style="text-align: center;">
                             {% for video in paragraph.videos %}
                             <!-- <div class="video-item"> -->
-                                <video width="{{paragraph.video_width}}" style="border: 1px solid black; border-radius: 1px;" preload="auto" src="{{paragraph.host}}{{video.url}}" type="video/mp4" controls loop {{paragraph.autoplay_attr}}></video>
+                                <video
+                                width="{{ paragraph.video_width }}"
+                                style="border: 1px solid black; border-radius: 1px;"
+                                preload="auto"
+                                src="{{ paragraph.host }}{{ video.url }}"
+                                type="video/mp4"
+                                {% if paragraph.loop != false %}loop{% endif %}
+                                {% if paragraph.autoplay = %}autoplay muted playsinline{% endif %}
+                                {% if paragraph.controls != false %}controls{% endif %}>
+                              </video>
                                 {% if video.caption %}
                                 <p class="caption"><span>{{video.caption}}</span></p>
-                                {% endif %}
+                                {% endif %} 
                             <!-- </div> -->
                             {% endfor %}
                         </div>
