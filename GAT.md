@@ -13,7 +13,7 @@ supplementary_link:
 arxiv_link: https://arxiv.org/abs/2509.24935
 github_link: 
 openreview_link: 
-conference: Arxiv 2025
+conference: ICML 2026
 
 tldr: We successfully scale up pure-Transformer GANs and beat diffusion/flow models in one-step class-conditional generation on ImageNet-256.
 
