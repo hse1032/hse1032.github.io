@@ -11,7 +11,7 @@ affiliations:
 paper_link: https://arxiv.org/abs/2509.24935
 supplementary_link: 
 arxiv_link: https://arxiv.org/abs/2509.24935
-github_link: 
+github_link: https://github.com/hse1032/GAT
 openreview_link: 
 conference: ICML 2026
 
